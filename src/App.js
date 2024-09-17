@@ -30,16 +30,17 @@ function App () {
  const AboutLoad = lazy(()=>{import('./Components/About')});
   const Approuter = createBrowserRouter([
     {
-      path: "/",
+      // path: "/",
+      path: "/FoodClub",
       element:  <Layout/>,
       errorElement:<Error/>,
       children:[
         {
-          path: "/",
+          path: "/FoodClub",
           element:<Main_container/>,
         },
         {
-          path: "/",
+          path: "/FoodClub",
           element:<status/>,
         },
         {

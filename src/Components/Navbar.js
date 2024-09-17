@@ -23,7 +23,7 @@ export default function Navbar() {
         {/* Navigation Links */}
         <div className="flex space-x-6 text-lg font-medium">
           <Link 
-            to="/" 
+            to="/FoodClub" 
             className="text-white hover:text-yellow-300 transition-colors duration-300"
             style={{'text-decoration': 'none', 'hover:text-decoration':'none'}}
           >
