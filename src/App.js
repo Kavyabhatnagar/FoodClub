@@ -7,7 +7,6 @@ import About from './Components/About';
 import Cart from './Components/Cart';
 import Contact from './Components/Contact'; 
 import { lazy, Suspense } from 'react';
-import * as ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import RestrauntPage from './Components/RestrauntPage';
 import { Provider } from 'react-redux';
@@ -27,15 +26,15 @@ function Layout() {
 
 function App() {
   const AboutLoad = lazy(() => import('./Components/About'));
-  
+
   const Approuter = createBrowserRouter([
     {
-      path: "/FoodClub",
+      path: "/FoodClub", // Base path for all routes
       element: <Layout />,
       errorElement: <Error />,
       children: [
         {
-          path: "/", // This will render the Main_container at the root of /FoodClub
+          path: "/", // Root path under /FoodClub
           element: <Main_container />,
         },
         {
@@ -59,7 +58,7 @@ function App() {
           element: <Cart />,
         },
       ],
-    }
+    },
   ]);
 
   return <RouterProvider router={Approuter} />;
