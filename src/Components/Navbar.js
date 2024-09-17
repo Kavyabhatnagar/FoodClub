@@ -15,7 +15,7 @@ export default function Navbar() {
         {/* Logo */}
         <div>
           <Link to="/FoodClub" className="flex items-center" style={{ 'text-decoration': 'none', 'hover:text-decoration': 'none' }}>
-            <img src="/fast-food.png" alt="Food logo" className="w-16 h-16 mr-2" />
+            <img src={process.env.PUBLIC_URL + '/fast-food.png'} alt="Food logo" className="w-16 h-16 mr-2" />
             <span className="text-2xl font-bold text-white">FoodClub</span>
           </Link>
         </div>
