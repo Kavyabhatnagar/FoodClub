@@ -2,7 +2,7 @@
   "name": "food_order",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kavyabhatnagar.github.io/FoodClub/",
+  "homepage": "https://kavyabhatnagar.github.io/FoodClub",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
