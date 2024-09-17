@@ -172,7 +172,7 @@ export default function Main_container() {
           filteredArray.map((data) => (
             <Link
               key={data.info.id}
-              to={"/restraunts/" + data.info.id}
+              to={"/FoodClub/restraunts/" + data.info.id}
               className="w-full"
               style={{'text-decoration': 'none'}}
             >
