@@ -27,6 +27,39 @@ function Layout() {
 function App() {
   const AboutLoad = lazy(() => import('./Components/About'));
 
+  // const Approuter = createBrowserRouter([
+  //   {
+  //     path: "/FoodClub", // Base path for all routes
+  //     element: <Layout />,
+  //     errorElement: <Error />,
+  //     children: [
+  //       {
+  //         path: "/", // Root path under /FoodClub
+  //         element: <Main_container />,
+  //       },
+  //       {
+  //         path: "About", // Relative path under /FoodClub
+  //         element: (
+  //           <Suspense fallback={<h1>Loading!!</h1>}>
+  //             <AboutLoad />
+  //           </Suspense>
+  //         ),
+  //       },
+  //       {
+  //         path: "Contact", // Relative path under /FoodClub
+  //         element: <Contact />,
+  //       },
+  //       {
+  //         path: "restraunts/:resId", // Relative path under /FoodClub
+  //         element: <RestrauntPage />,
+  //       },
+  //       {
+  //         path: "Cart", // Relative path under /FoodClub
+  //         element: <Cart />,
+  //       },
+  //     ],
+  //   },
+  // ]);
   const Approuter = createBrowserRouter([
     {
       path: "/FoodClub", // Base path for all routes
@@ -34,7 +67,7 @@ function App() {
       errorElement: <Error />,
       children: [
         {
-          path: "/", // Root path under /FoodClub
+          path: "", // Use an empty string for the relative root path
           element: <Main_container />,
         },
         {
