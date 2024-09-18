@@ -60,7 +60,7 @@ function App() {
   //     ],
   //   },
   // ]);
-  const basePath = process.env.REACT_APP_BASE_PATH || '/';
+  const basePath = process.env.REACT_APP_BASE_PATH;
   const Approuter = createBrowserRouter([
     {
       path: basePath || '/', // Base path for all routes
