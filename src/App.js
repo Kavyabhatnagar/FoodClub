@@ -60,9 +60,10 @@ function App() {
   //     ],
   //   },
   // ]);
+  const basePath = process.env.REACT_APP_BASE_PATH || '/';
   const Approuter = createBrowserRouter([
     {
-      path: "/FoodClub", // Base path for all routes
+      path: basePath || '/', // Base path for all routes
       element: <Layout />,
       errorElement: <Error />,
       children: [

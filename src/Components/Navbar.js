@@ -7,14 +7,14 @@ export default function Navbar() {
   const onlineStatus = useOnlineStatus();
   const items = useSelector((store) => store.cart.items);
   console.log("cart", items);
-
+  const basePath = process.env.REACT_APP_BASE_PATH || '/';
   return (
     <nav className="bg-gradient-to-r from-pink-200 via-pink-300 to-pink-500 shadow-lg py-4 mb-16">
       <div className="container mx-auto flex justify-between items-center">
         
         {/* Logo */}
         <div>
-          <Link to="/FoodClub" className="flex items-center" style={{ 'text-decoration': 'none', 'hover:text-decoration': 'none' }}>
+          <Link to={`${basePath}`} className="flex items-center" style={{ 'text-decoration': 'none', 'hover:text-decoration': 'none' }}>
             <img src={process.env.PUBLIC_URL + '/fast-food.png'} alt="Food logo" className="w-16 h-16 mr-2" />
             <span className="text-2xl font-bold text-white">FoodClub</span>
           </Link>
@@ -23,7 +23,7 @@ export default function Navbar() {
         {/* Navigation Links */}
         <div className="flex space-x-6 text-lg font-medium">
           <Link 
-            to="/FoodClub" 
+            to={`${basePath}`}
             className="text-white hover:text-yellow-300 transition-colors duration-300"
             style={{ 'text-decoration': 'none', 'hover:text-decoration': 'none' }}
           >
@@ -31,7 +31,7 @@ export default function Navbar() {
           </Link>
 
           <Link 
-            to="/FoodClub/About" 
+            to={`${basePath}About`}  
             className="text-white hover:text-yellow-300 transition-colors duration-300"
             style={{ 'text-decoration': 'none', 'hover:text-decoration': 'none' }}
           >
@@ -39,7 +39,7 @@ export default function Navbar() {
           </Link>
 
           <Link 
-            to="/FoodClub/Contact" 
+            to={`${basePath}Contact`} 
             className="text-white hover:text-yellow-300 transition-colors duration-300"
             style={{ 'text-decoration': 'none', 'hover:text-decoration': 'none' }}
           >
@@ -47,7 +47,7 @@ export default function Navbar() {
           </Link>
 
           <Link 
-            to="/FoodClub/Cart" 
+            to={`${basePath}Cart`}  
             className="text-white hover:text-yellow-300 transition-colors duration-300"
             style={{ 'text-decoration': 'none', 'hover:text-decoration': 'none' }}
           >
